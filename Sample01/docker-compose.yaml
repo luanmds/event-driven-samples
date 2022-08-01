@@ -1,0 +1,38 @@
+version: "3.8"
+services:
+  api:
+      build: 
+        context: src/EventDriven.Api
+        dockerfile: Dockerfile.Api
+      ports:
+        - "8000:80"
+      links:
+        - rabbitmq
+  worker:
+      build: 
+        context: src/EventDriven.Worker
+        dockerfile: Dockerfile.Worker
+      restart: always
+      links:
+        - rabbitmq
+  rabbitmq:
+    build: 
+        context: src/RabbitMq
+        dockerfile: Dockerfile.rabbit
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+# rabbitmq:
+  #   image: rabbitmq:3.10-management-alpine
+  #   environment:
+  #     - RABBITMQ_CONFIG_FILE=/src/RabbitMq/rabbitmq.conf
+  #   ports:
+  #     - "5672:5672"
+  #     - "15672:15672"
+  #   volumes:
+  #     - /src/RabbitMq/rabbitmq.config:/etc/rabbitmq/rabbitmq.config:ro
+  #     - /src/RabbitMq/definitions.json:/etc/rabbitmq/definitions.json:ro
+
+
+    
