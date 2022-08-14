@@ -9,13 +9,13 @@ COPY *.csproj ./
 RUN dotnet restore
 COPY . .
 WORKDIR /src
-RUN dotnet build "EventDriven.Api.csproj" -c Release -o /app/build
+RUN dotnet build "UrlShortener.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "EventDriven.Api.csproj" -c Release -o /app/publish
+RUN dotnet publish "UrlShortener.Api.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 EXPOSE 80
-ENTRYPOINT ["dotnet", "EventDriven.Api.dll"]
+ENTRYPOINT ["dotnet", "UrlShortener.Api.dll"]

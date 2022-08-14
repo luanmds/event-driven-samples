@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>UrlShortened.Api</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.17.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Domain\ValueObject\URLGenerator.cs" />
+    <Compile Include="Domain\ValueObject\UrlGenerator.cs" />
+    <Compile Remove="Domain\ValueObject\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Domain\ValueObject\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Domain\ValueObject\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Domain\ValueObject\**" />
+  </ItemGroup>
+
+</Project>

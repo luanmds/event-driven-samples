@@ -288,25 +288,28 @@
     ]
   },
   "packageFolders": {
-    "/home/luan/.nuget/packages/": {}
+    "C:\\Users\\luan.msilva\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/luan/dev/event-driven-samples/Sample01/src/EventDriven.Api1/EventDriven.Api1.csproj",
-      "projectName": "EventDriven.Api1",
-      "projectPath": "/home/luan/dev/event-driven-samples/Sample01/src/EventDriven.Api1/EventDriven.Api1.csproj",
-      "packagesPath": "/home/luan/.nuget/packages/",
-      "outputPath": "/home/luan/dev/event-driven-samples/Sample01/src/EventDriven.Api1/obj/",
+      "projectUniqueName": "\\\\wsl$\\Ubuntu-20.04\\home\\luan\\dev\\event-driven-samples\\Sample01\\src\\EventDriven.Api\\EventDriven.Api.csproj",
+      "projectName": "EventDriven.Api",
+      "projectPath": "\\\\wsl$\\Ubuntu-20.04\\home\\luan\\dev\\event-driven-samples\\Sample01\\src\\EventDriven.Api\\EventDriven.Api.csproj",
+      "packagesPath": "C:\\Users\\luan.msilva\\.nuget\\packages\\",
+      "outputPath": "\\\\wsl$\\Ubuntu-20.04\\home\\luan\\dev\\event-driven-samples\\Sample01\\src\\EventDriven.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/luan/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\luan.msilva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://stonepagamentos.pkgs.visualstudio.com/_packaging/FinancialProductsArtifacts/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
@@ -351,8 +354,17 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.408/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1801",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Unable to load the service index for source https://stonepagamentos.pkgs.visualstudio.com/_packaging/FinancialProductsArtifacts/nuget/v3/index.json.",
+      "libraryId": "RabbitMQ.Client"
+    }
+  ]
 }
