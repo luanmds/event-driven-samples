@@ -11,16 +11,16 @@ namespace UrlShortened.Api.Repository
         private readonly MongoClient _mongoClient;
         private readonly IMongoDatabase _mongoDatabase;
 
-        public MongoRepository(DatabaseSettings databaseSettings)
+        public MongoRepository(IOptions<DatabaseSettings> databaseSettings)
         {
             _mongoClient = new MongoClient(
-                databaseSettings.ConnectionString);
+                databaseSettings.Value.ConnectionString);
 
             _mongoDatabase = _mongoClient.GetDatabase(
-                databaseSettings.DatabaseName);
+                databaseSettings.Value.DatabaseName);
 
             _urlsCollection = _mongoDatabase.GetCollection<ShortURL>(
-                databaseSettings.UrlsCollectionName);
+                databaseSettings.Value.UrlsCollectionName);
         }
         
         public async Task<ShortURL?> GetByIdAsync(string id) =>
