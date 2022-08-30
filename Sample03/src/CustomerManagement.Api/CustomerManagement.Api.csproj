@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MongoDB.Driver" Version="2.17.1" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Domain\Services\**" />
+      <Compile Remove="Domain\Events\Interfaces\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Domain\Services\**" />
+      <EmbeddedResource Remove="Domain\Events\Interfaces\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Domain\Services\**" />
+      <None Remove="Domain\Events\Interfaces\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Domain\Services\**" />
+      <Content Remove="Domain\Events\Interfaces\**" />
+    </ItemGroup>
+
+</Project>
