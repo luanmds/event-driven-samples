@@ -6,8 +6,10 @@ The sample consists of a Command to shorten the URL and a Query to fetch the sho
 
 The Controller has a endpoint that receives a URL as parameter, after calls Command first to generate and save the url shortened. Second, calls Query Handler to create a query for get url shortened from database.
 
+---
+
 ## How to Run
 
 1. Install Docker and Docker-Compose your machine;
 2. Execute the docker-compose.yaml file to Run project;
-3. Open your favorite browser in **http://localhost:8000**;
+3. Open your favorite browser in [http://localhost:8000/swagger];
