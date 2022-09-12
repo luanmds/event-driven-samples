@@ -10,3 +10,4 @@ RabbitMQ will receive, manage and send the message to a specific queue, where th
 
 1. Install Docker and Docker-Compose your machine;
 2. Execute the docker-compose.yaml file to Run projects;
+3. Open your favorite browser in **http://localhost:8000** (to WebAPI);

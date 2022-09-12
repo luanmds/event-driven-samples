@@ -9,7 +9,6 @@ Here is a list of samples with code and a short description:
 - Sample 01 - Simple **Event-Driven** between two API microservices and RabbitMQ for receiving and emitting events.
 - Sample 02 - Using the **CQRS** Pattern in a simple URL Shortener program.
 - Sample 03 - Using **Event-Sourcing** in a microservice for client management.
-- Sample 04 - Using all concepts in a unique project.
 
 ## Some References:
 

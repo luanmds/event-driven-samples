@@ -11,6 +11,9 @@ x64/
 # VSCode
 .vscode/
 
+# VS
+.vs/
+
 # JetBrains
 .idea/
 **/.idea
