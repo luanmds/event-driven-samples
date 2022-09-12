@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using CustomerManagement.Api.Domain.Events;
 using CustomerManagement.Api.Domain.Model;
-using Microsoft.AspNetCore.Mvc.Filters;
 using MongoDB.Driver;
 
 namespace CustomerManagement.Api.Repository
@@ -16,9 +15,9 @@ namespace CustomerManagement.Api.Repository
             _repository = repository;
         }
 
-        public async Task<List<Event<Customer>>> GetByPartitionKeyAsync(string partitionKey) =>
+        public async Task<List<Event<Customer>>> GetByCustomerIdKeyAsync(string customerId) =>
             await _repository._eventsCollection
-                .Find(x => x.PartitionKey == partitionKey)
+                .Find(x => x.PartitionKey == customerId)
                 .ToListAsync();
 
         public async Task CreateAsync(Event<Customer> data) =>
